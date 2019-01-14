@@ -37,7 +37,7 @@ void setup()
   pinMode(totem_ent, INPUT); 
   pinMode(totem_ramp, INPUT);
   pinMode(totem_est, INPUT);
- // pinMode(totem_e_ramp, INPUT);
+  pinMode(totem_e_ramp, INPUT);
   
   //Estado inicial dos reles - desligados
   digitalWrite(sinal_verm_est, HIGH); //vermelho esq
