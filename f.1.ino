@@ -76,9 +76,9 @@ void loop()
     digitalWrite(prox_est, LOW);
     digitalWrite(prox_ramp, LOW);
     digitalWrite(prox_e_ramp, LOW);
-    Serial.print("TOTEM ENTRADA ACIONADO");
+    
   }
-
+Serial.println("TOTEM ENTRADA ACIONADO");
   delayAuto();
   estadoInicial();
 
@@ -92,9 +92,9 @@ void loop()
     digitalWrite(prox_est, LOW);
     digitalWrite(prox_ent, LOW);
     digitalWrite(prox_e_ramp, LOW);
-    Serial.print("TOTEM RAMPA ACIONADO");
+    
   }
-
+Serial.println("TOTEM RAMPA ACIONADO");
   delayAuto();
   estadoInicial();
 
@@ -108,7 +108,10 @@ void loop()
     digitalWrite(prox_ent, LOW);
     digitalWrite(prox_ramp, LOW);
     digitalWrite(prox_e_ramp, LOW);
-    Serial.print("TOTEM ESTACIONAMENTO ACIONADO");
+    }
+   Serial.println("TOTEM ESTACIONAMENTO ACIONADO");
+  delayAuto();
+  estadoInicial();
     
   }
   
@@ -130,4 +133,3 @@ void loop()
   estadoInicial();
 */
   
-}
