@@ -22,7 +22,7 @@ int alterado = 0;
   
 void setup()
 {
-  Serial.begin(9600); //porta serial
+  Serial.begin(9600); //inicia porta serial
   //Define pinos para o rele como saida
   pinMode(sinal_verm_est, OUTPUT); 
   pinMode(sinal_verd_est, OUTPUT);
