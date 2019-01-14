@@ -57,7 +57,7 @@ void estadoInicial(){
 
 void delayAuto(){
   if(alterado == 1){
-    delay(1000*2);
+    delay(1000*1);
     alterado = 0;
   }
 }
@@ -65,10 +65,8 @@ void delayAuto(){
 
 void loop()
 {
-
-  while(digitalRead(totem_ent) == 0)
-  {
-    alterado = 1;
+  while(digitalRead(totem_ent) == 0){
+  alterado = 1;
     digitalWrite(sinal_verm_est, HIGH);
     digitalWrite(sinal_verd_est, LOW);
     digitalWrite(sinal_verm_ramp, HIGH);
@@ -76,14 +74,12 @@ void loop()
     digitalWrite(prox_est, LOW);
     digitalWrite(prox_ramp, LOW);
     digitalWrite(prox_e_ramp, LOW);
-    
-  }
-Serial.println("TOTEM ENTRADA ACIONADO");
+    }
+  Serial.println("TOTEM ENTRADA ACIONADO");
   delayAuto();
   estadoInicial();
 
-  while(digitalRead(totem_ramp) == 0)
-  {
+  while(digitalRead(totem_ramp) == 0){
     alterado = 1;
     digitalWrite(sinal_verm_est, HIGH);
     digitalWrite(sinal_verd_est, LOW);
@@ -92,14 +88,12 @@ Serial.println("TOTEM ENTRADA ACIONADO");
     digitalWrite(prox_est, LOW);
     digitalWrite(prox_ent, LOW);
     digitalWrite(prox_e_ramp, LOW);
-    
-  }
-Serial.println("TOTEM RAMPA ACIONADO");
+    }
+  Serial.println("TOTEM RAMPA ACIONADO");
   delayAuto();
   estadoInicial();
 
-  while(digitalRead(totem_est) == 0)
-  {
+  while(digitalRead(totem_est) == 0){
     alterado = 1;
     digitalWrite(sinal_verm_est, LOW);
     digitalWrite(sinal_verd_est, HIGH);
@@ -109,16 +103,11 @@ Serial.println("TOTEM RAMPA ACIONADO");
     digitalWrite(prox_ramp, LOW);
     digitalWrite(prox_e_ramp, LOW);
     }
-   Serial.println("TOTEM ESTACIONAMENTO ACIONADO");
+  Serial.println("TOTEM ESTACIONAMENTO ACIONADO");
   delayAuto();
   estadoInicial();
-    
-  }
   
-  /*
-   
-   while(digitalRead(totem_e_ramp) == 0)
-  {
+   while(digitalRead(totem_e_ramp) == 0){
     alterado = 1;
     digitalWrite(sinal_verm_est, HIGH);
     digitalWrite(sinal_verd_est, LOW);
@@ -127,9 +116,9 @@ Serial.println("TOTEM RAMPA ACIONADO");
     digitalWrite(prox_est, LOW);
     digitalWrite(prox_ramp, LOW);
     digitalWrite(prox_ent, LOW);
-  }
-
+    }
+  Serial.println("TOTEM ENTRADA RAMPA ACIONADO");
   delayAuto();
   estadoInicial();
-*/
+}
   
